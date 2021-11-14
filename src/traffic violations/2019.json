@@ -1,0 +1,58 @@
+[
+  {
+    "date_time": "2019-05-05T15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "SPEEDING",
+    "fine_amount": 310.00
+  },
+
+  {
+    "date_time": "2019-05-05T15:39:03",
+    "first_name": "Ivan",
+    "last_name": "Ivanov",
+    "type": "DRUNK DRIVING",
+    "fine_amount": 310.00
+  },
+
+  {
+    "date_time": "2019-07-05T15:39:03",
+    "first_name": "Petr",
+    "last_name": "Petrov",
+    "type": "SPEEDING",
+    "fine_amount": 350.00
+  },
+
+  {
+    "date_time": "2019-07-05T15:39:03",
+    "first_name": "Petr",
+    "last_name": "Petrov",
+    "type": "DRUNK DRIVING",
+    "fine_amount": 320.00
+  },
+
+  {
+    "date_time": "2019-07-05T15:39:03",
+    "first_name": "Sidor",
+    "last_name": "Sidorov",
+    "type": "DRUNK DRIVING",
+    "fine_amount": 350.00
+  },
+
+  {
+    "date_time": "2019-07-05T15:39:03",
+    "first_name": "Max",
+    "last_name": "Maximov",
+    "type": "DRIVING THROUGH A RED LIGHT",
+    "fine_amount": 330.00
+  },
+
+  {
+    "date_time": "2019-07-05T15:39:03",
+    "first_name": "Sidor",
+    "last_name": "Sidorov",
+    "type": "DRIVING THROUGH A RED LIGHT",
+    "fine_amount": 330.00
+  }
+
+]
