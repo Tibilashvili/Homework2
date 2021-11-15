@@ -11,16 +11,18 @@ import java.util.concurrent.Callable;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetFiles implements Callable<List<Ticket>> {
+public class JsonFileReader implements Callable<List<Ticket>> {
 
     private File file;
 
+
+       // метод выбирающий все json-файлы и возвращающий их
        public static File[] getFileJSON() {
         File file = new File("src/traffic violations");
         return file.listFiles((dir, name) -> name.endsWith(".json"));
     }
 
-
+    // метод считывающий содержимое файла и записывающий результат в список.
     public List<Ticket> getList(File file) throws IOException {
         byte[] mapData;
         Ticket[] ticketsArr;

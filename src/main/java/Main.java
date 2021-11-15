@@ -5,27 +5,25 @@ import java.util.concurrent.*;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException, ExecutionException {
-        GetFiles getFiles;
+    public static void main(String[] args) throws IOException, InterruptedException, ExecutionException{
         Result results = new Result();
 
-        File[] fileArray = GetFiles.getFileJSON();
+        File[] fileArray = JsonFileReader.getFileJSON();
 
-        ExecutorService executor = Executors.newFixedThreadPool(fileArray.length);
-        List<Ticket> result = new ArrayList<>();
+        ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+
+       List<Ticket> result = new ArrayList<>();
 
         for (File file : fileArray) {
-            getFiles = new GetFiles(file);
-            Callable<List<Ticket>> callable = getFiles;
-            result.addAll(executor.submit(callable).get());
-
+            Future<List<Ticket>> future = executor.submit(new JsonFileReader(file));
+            result.addAll(future.get());
         }
+
         executor.shutdown();
         results.sumTicketAmountAllYears(result);
         results.allVilators(result);
 
     }
-
 }
 
 
